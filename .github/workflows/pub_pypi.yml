@@ -24,6 +24,7 @@ jobs:
           pip install uv
           uv venv --python ${{ matrix.python-version }}
           uv sync --group=dev
+          source .venv/bin/activate
           pytest
 
   build-and-publish:
@@ -43,6 +44,7 @@ jobs:
         run: |
           pip install uv
           uv sync --group=dev
+          source .venv/bin/activate
           hatch build
 
       - name: Publish to PyPI
