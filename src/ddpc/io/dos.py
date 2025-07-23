@@ -48,9 +48,9 @@ def read_dos(
     -------
     tuple of (polars.DataFrame, float, bool)
 
-    - DataFrame containing DOS data with energy points and DOS values
-    - Fermi energy in eV
-    - Boolean indicating whether the data contains orbital projections
+        - DataFrame containing DOS data with energy points and DOS values
+        - Fermi energy in eV
+        - Boolean indicating whether the data contains orbital projections
 
     Raises
     ------
@@ -95,9 +95,9 @@ def read_dos_h5(absfile: str, mode: int) -> tuple[pl.DataFrame, float, bool]:
     -------
     tuple of (polars.DataFrame, float, bool)
 
-    - DataFrame containing processed DOS data
-    - Fermi energy in eV extracted from the file
-    - Boolean indicating presence of orbital projection data
+        - DataFrame containing processed DOS data
+        - Fermi energy in eV extracted from the file
+        - Boolean indicating presence of orbital projection data
     """
     with h5py.File(absfile, "r") as dos:
         dosinfo = dos["DosInfo"]
@@ -143,9 +143,9 @@ def read_dos_json(absfile: str, mode: int) -> tuple[pl.DataFrame, float, bool]:
     -------
     tuple of (polars.DataFrame, float, bool)
 
-    - DataFrame containing processed DOS data
-    - Fermi energy in eV extracted from the file
-    - Boolean indicating presence of orbital projection data
+        - DataFrame containing processed DOS data
+        - Fermi energy in eV extracted from the file
+        - Boolean indicating presence of orbital projection data
     """
     with open(absfile, encoding="utf-8") as fin:
         dos = load(fin)

@@ -29,9 +29,8 @@ dependencies = [
 license = 'MIT'
 
 [dependency-groups]
-dev = [ # build docs
+dev = [
   "mypy>=1.16.1",                # typing
-  "pymatgen>=2025.6.14",         # find orth
   "pytest>=8.4.1",               # test framework
   "pytest-xdist>=3.8",           # parallel test
   "ruff>=0.12.2",                # format and check syntax

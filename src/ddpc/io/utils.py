@@ -211,6 +211,7 @@ def _split_atomindex_orbital(s: str) -> tuple[int, str]:
     -------
     tuple of (int, str)
         Two-element tuple containing:
+
         - int: Atom index (numeric part)
         - str: Orbital designation (alphabetic part, empty if none)
 
@@ -255,6 +256,7 @@ def _get_ao_spin(k: str) -> tuple[str, str]:
     -------
     tuple of (str, str)
         Two-element tuple containing:
+
         - str: Orbital designation (e.g., "s", "px", "dxy")
         - str: Spin channel ("up", "down", or empty string for non-spin-polarized)
 

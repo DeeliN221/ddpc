@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 ddpc API documentation
-=================
+======================
 
 Welcome to ddpc's API documentation.
 

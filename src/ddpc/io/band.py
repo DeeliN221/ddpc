@@ -47,9 +47,10 @@ def read_band(
     Returns
     -------
     tuple of (polars.DataFrame, float, bool)
-    - DataFrame containing band structure data with k-points and energies
-    - Fermi energy in eV
-    - Boolean indicating whether the data contains orbital projections
+
+        - DataFrame containing band structure data with k-points and energies
+        - Fermi energy in eV
+        - Boolean indicating whether the data contains orbital projections
 
     Raises
     ------
@@ -98,9 +99,9 @@ def read_band_h5(absfile: str, mode: int) -> tuple[pl.DataFrame, float, bool]:
     -------
     tuple of (polars.DataFrame, float, bool)
 
-    - DataFrame containing processed band structure data
-    - Fermi energy in eV extracted from the file
-    - Boolean indicating presence of orbital projection data
+        - DataFrame containing processed band structure data
+        - Fermi energy in eV extracted from the file
+        - Boolean indicating presence of orbital projection data
 
     Raises
     ------
@@ -169,9 +170,9 @@ def read_band_json(absfile: str, mode: int) -> tuple[pl.DataFrame, float, bool]:
     -------
     tuple of (polars.DataFrame, float, bool)
 
-    - DataFrame containing processed band structure data
-    - Fermi energy in eV extracted from the file
-    - Boolean indicating presence of orbital projection data
+        - DataFrame containing processed band structure data
+        - Fermi energy in eV extracted from the file
+        - Boolean indicating presence of orbital projection data
 
     Notes
     -----
@@ -325,8 +326,9 @@ def read_pband_h5(band: h5py.File, mode: int) -> pl.DataFrame:
         - label: High-symmetry k-point labels
         - kx, ky, kz: k-point coordinates
         - dist: Cumulative distance along k-path
-        - Orbital projection columns: Named as "{atom_index}{orbital}-{spin}"
-            for spin-polarized or "{atom_index}{orbital}" for non-spin-polarized
+        - Orbital projection columns:
+            - "{atom_index}{orbital}-{spin}" for spin-polarized
+            - "{atom_index}{orbital}" for non-spin-polarized
 
     Notes
     -----

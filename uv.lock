@@ -238,7 +238,6 @@ dependencies = [
 [package.dev-dependencies]
 dev = [
     { name = "mypy" },
-    { name = "pymatgen" },
     { name = "pytest" },
     { name = "pytest-xdist" },
     { name = "ruff" },
@@ -261,7 +260,6 @@ requires-dist = [
 [package.metadata.requires-dev]
 dev = [
     { name = "mypy", specifier = ">=1.16.1" },
-    { name = "pymatgen", specifier = ">=2025.6.14" },
     { name = "pytest", specifier = ">=8.4.1" },
     { name = "pytest-xdist", specifier = ">=3.8" },
     { name = "ruff", specifier = ">=0.12.2" },

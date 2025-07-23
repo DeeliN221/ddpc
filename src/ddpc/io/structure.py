@@ -63,6 +63,7 @@ def read_single_structure(p: str | Path):
     ----------
     p : str or pathlib.Path
         Path to the structure file. Supported formats include:
+
         - .as : DS-PAW atomic structure format
         - .xyz : RESCU XYZ format
         - Other formats supported by ASE (POSCAR, CIF, etc.)
