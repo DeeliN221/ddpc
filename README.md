@@ -10,7 +10,7 @@
 
 This package is in early stage with limited functions. Use at your own risk.
 
-[API reference]()
+[API reference](https://ddpc.readthedocs.io/en/latest/index.html)
 
 ## ✨ Key Features
 

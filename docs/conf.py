@@ -1,5 +1,11 @@
 """API doc configuration file."""
 
+import os
+import sys
+
+# Add the source directory to the Python path
+sys.path.insert(0, os.path.abspath("../src"))
+
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
