@@ -23,7 +23,7 @@ jobs:
         run: |
           pip install uv
           uv venv --python ${{ matrix.python-version }}
-          uv sync --extra=dev
+          uv sync --group=dev
           pytest
 
   build-and-publish:
@@ -42,7 +42,7 @@ jobs:
       - name: Build
         run: |
           pip install uv
-          uv sync --extra=dev
+          uv sync --group=dev
           hatch build
 
       - name: Publish to PyPI
