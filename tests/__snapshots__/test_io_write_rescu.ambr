@@ -1,0 +1,31 @@
+# serializer version: 1
+# name: test_write
+  '''
+  SiTi.xyz
+  Atoms(symbols='Si254Ti54', pbc=True)
+  '''
+# ---
+# name: test_write.1
+  '''
+  BN.xyz
+  Atoms(symbols='NB', pbc=True)
+  '''
+# ---
+# name: test_write.2
+  '''
+  graphene.xyz
+  Atoms(symbols='C2', pbc=True)
+  '''
+# ---
+# name: test_write.3
+  '''
+  Si.xyz
+  Atoms(symbols='Si2', pbc=True, initial_magmoms=...)
+  '''
+# ---
+# name: test_write.4
+  '''
+  huge.xyz
+  Atoms(symbols='C9842B9842N9842', pbc=True)
+  '''
+# ---

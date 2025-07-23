@@ -1,0 +1,109 @@
+# serializer version: 1
+# name: test_find_orth
+  '''
+  s=PosixPath('/home/zzl/lab/mob_proj/ddpc/tests/structures/mag.as')
+  op=PosixPath('/home/zzl/lab/mob_proj/ddpc/tests/structures/output/mag.orth')
+  '''
+# ---
+# name: test_find_orth.1
+  '''
+  s=PosixPath('/home/zzl/lab/mob_proj/ddpc/tests/structures/magxyz.as')
+  op=PosixPath('/home/zzl/lab/mob_proj/ddpc/tests/structures/output/magxyz.orth')
+  '''
+# ---
+# name: test_find_orth.2
+  '''
+  s=PosixPath('/home/zzl/lab/mob_proj/ddpc/tests/structures/fixxyz.as')
+  op=PosixPath('/home/zzl/lab/mob_proj/ddpc/tests/structures/output/fixxyz.orth')
+  '''
+# ---
+# name: test_find_orth.3
+  '''
+  s=PosixPath('/home/zzl/lab/mob_proj/ddpc/tests/structures/lat.as')
+  op=PosixPath('/home/zzl/lab/mob_proj/ddpc/tests/structures/output/lat.orth')
+  '''
+# ---
+# name: test_find_orth.4
+  '''
+  s=PosixPath('/home/zzl/lab/mob_proj/ddpc/tests/structures/all.as')
+  op=PosixPath('/home/zzl/lab/mob_proj/ddpc/tests/structures/output/all.orth')
+  '''
+# ---
+# name: test_find_orth.5
+  '''
+  s=PosixPath('/home/zzl/lab/mob_proj/ddpc/tests/structures/fixxyzmagxyz.as')
+  op=PosixPath('/home/zzl/lab/mob_proj/ddpc/tests/structures/output/fixxyzmagxyz.orth')
+  '''
+# ---
+# name: test_find_prim
+  '''
+  s=PosixPath('/home/zzl/lab/mob_proj/ddpc/tests/structures/mag.as')
+  op=PosixPath('/home/zzl/lab/mob_proj/ddpc/tests/structures/output/mag.prim')
+  '''
+# ---
+# name: test_find_prim.1
+  '''
+  s=PosixPath('/home/zzl/lab/mob_proj/ddpc/tests/structures/magxyz.as')
+  op=PosixPath('/home/zzl/lab/mob_proj/ddpc/tests/structures/output/magxyz.prim')
+  '''
+# ---
+# name: test_find_prim.2
+  '''
+  s=PosixPath('/home/zzl/lab/mob_proj/ddpc/tests/structures/fixxyz.as')
+  op=PosixPath('/home/zzl/lab/mob_proj/ddpc/tests/structures/output/fixxyz.prim')
+  '''
+# ---
+# name: test_find_prim.3
+  '''
+  s=PosixPath('/home/zzl/lab/mob_proj/ddpc/tests/structures/lat.as')
+  op=PosixPath('/home/zzl/lab/mob_proj/ddpc/tests/structures/output/lat.prim')
+  '''
+# ---
+# name: test_find_prim.4
+  '''
+  s=PosixPath('/home/zzl/lab/mob_proj/ddpc/tests/structures/all.as')
+  op=PosixPath('/home/zzl/lab/mob_proj/ddpc/tests/structures/output/all.prim')
+  '''
+# ---
+# name: test_find_prim.5
+  '''
+  s=PosixPath('/home/zzl/lab/mob_proj/ddpc/tests/structures/fixxyzmagxyz.as')
+  op=PosixPath('/home/zzl/lab/mob_proj/ddpc/tests/structures/output/fixxyzmagxyz.prim')
+  '''
+# ---
+# name: test_scale_atom_pos
+  '''
+  s=PosixPath('/home/zzl/lab/mob_proj/ddpc/tests/structures/mag.as')
+  op=PosixPath('/home/zzl/lab/mob_proj/ddpc/tests/structures/output/mag.POSCAR')
+  '''
+# ---
+# name: test_scale_atom_pos.1
+  '''
+  s=PosixPath('/home/zzl/lab/mob_proj/ddpc/tests/structures/magxyz.as')
+  op=PosixPath('/home/zzl/lab/mob_proj/ddpc/tests/structures/output/magxyz.POSCAR')
+  '''
+# ---
+# name: test_scale_atom_pos.2
+  '''
+  s=PosixPath('/home/zzl/lab/mob_proj/ddpc/tests/structures/fixxyz.as')
+  op=PosixPath('/home/zzl/lab/mob_proj/ddpc/tests/structures/output/fixxyz.POSCAR')
+  '''
+# ---
+# name: test_scale_atom_pos.3
+  '''
+  s=PosixPath('/home/zzl/lab/mob_proj/ddpc/tests/structures/lat.as')
+  op=PosixPath('/home/zzl/lab/mob_proj/ddpc/tests/structures/output/lat.POSCAR')
+  '''
+# ---
+# name: test_scale_atom_pos.4
+  '''
+  s=PosixPath('/home/zzl/lab/mob_proj/ddpc/tests/structures/all.as')
+  op=PosixPath('/home/zzl/lab/mob_proj/ddpc/tests/structures/output/all.POSCAR')
+  '''
+# ---
+# name: test_scale_atom_pos.5
+  '''
+  s=PosixPath('/home/zzl/lab/mob_proj/ddpc/tests/structures/fixxyzmagxyz.as')
+  op=PosixPath('/home/zzl/lab/mob_proj/ddpc/tests/structures/output/fixxyzmagxyz.POSCAR')
+  '''
+# ---

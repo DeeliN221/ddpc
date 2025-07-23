@@ -1,0 +1,43 @@
+exclude: 'tests/'
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v5.0.0  # this is optional, use `pre-commit autoupdate` to get the latest rev!
+  hooks:
+    - id: check-yaml
+    - id: check-toml
+    - id: end-of-file-fixer
+    - id: trailing-whitespace
+
+- repo: local
+  hooks:
+  - id: ruff
+    name: ruff-format
+    stages: [pre-commit, pre-push]
+    language: system
+    entry: ruff format
+    types: [python]
+    pass_filenames: true
+
+  - id: ruff
+    name: ruff-check
+    stages: [pre-commit, pre-push]
+    language: system
+    entry: ruff check --fix
+    types: [python]
+    pass_filenames: true
+
+  - id: Mypy
+    name: mypy
+    stages: [pre-commit, pre-push]
+    language: system
+    entry: mypy
+    types: [python]
+    pass_filenames: true
+
+  - id: pytest
+    name: pytest
+    stages: [pre-push]
+    language: system
+    entry: pytest -n 4
+    types: [python]
+    pass_filenames: false
