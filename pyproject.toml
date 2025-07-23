@@ -4,7 +4,11 @@ build-backend = "hatchling.build"
 requires = ["hatchling"]
 
 [tool.hatch.build]
-include = ["src/", "README.md", "LICENSE", "pyproject.toml"]
+only-include = ["src"]
+[tool.hatch.build.targets.dist]
+packages = ["src/ddpc"]
+[tool.hatch.build.targets.wheel]
+packages = ["src/ddpc"]
 
 [project]
 name = "ddpc"
