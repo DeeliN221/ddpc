@@ -24,7 +24,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        python -m pip install --group .
+        python -m pip install --group dev .
     - name: Pytest
       run: |
         pytest
@@ -45,7 +45,7 @@ jobs:
       - name: Build
         run: |
           python -m pip install --upgrade pip
-          python -m pip install --group .
+          python -m pip install --group dev .
           hatch build
 
       - name: Publish to PyPI
