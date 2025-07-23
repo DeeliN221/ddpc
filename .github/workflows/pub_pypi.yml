@@ -16,17 +16,18 @@ jobs:
       matrix:
         python-version: [3.12, 3.13]
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Test
-        run: |
-          pip install uv
-          uv venv --python ${{ matrix.python-version }}
-          uv sync  --group dev
-          source  .venv/bin/activate
-          uv pip install  .
-          pytest
+    - uses: actions/checkout@v4
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        python -m pip install --group .
+    - name: Pytest
+      run: |
+        pytest
 
   build-and-publish:
     needs: test
@@ -43,10 +44,8 @@ jobs:
 
       - name: Build
         run: |
-          pip install uv
-          uv sync  --group dev
-          source  .venv/bin/activate
-          uv pip install  .
+          python -m pip install --upgrade pip
+          python -m pip install --group .
           hatch build
 
       - name: Publish to PyPI
