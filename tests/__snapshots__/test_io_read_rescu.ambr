@@ -1,26 +1,26 @@
 # serializer version: 1
 # name: test_read
   '''
-  SiTi.xyz
-  Atoms(symbols='Si254Ti54', pbc=True)
-  '''
-# ---
-# name: test_read.1
-  '''
   BN.xyz
   Atoms(symbols='NB', pbc=True)
   '''
 # ---
+# name: test_read.1
+  '''
+  Si.xyz
+  Atoms(symbols='Si2', pbc=True, initial_magmoms=...)
+  '''
+# ---
 # name: test_read.2
   '''
-  graphene.xyz
-  Atoms(symbols='C2', pbc=True)
+  SiTi.xyz
+  Atoms(symbols='Si254Ti54', pbc=True)
   '''
 # ---
 # name: test_read.3
   '''
-  Si.xyz
-  Atoms(symbols='Si2', pbc=True, initial_magmoms=...)
+  graphene.xyz
+  Atoms(symbols='C2', pbc=True)
   '''
 # ---
 # name: test_read.4

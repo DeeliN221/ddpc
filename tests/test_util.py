@@ -29,7 +29,7 @@ def temp_output_dir():
 @pytest.fixture
 def sample_structure_files(structures_dir):
     """Get list of sample .as structure files for testing."""
-    return list(structures_dir.glob("*.as"))
+    return sorted(structures_dir.glob("*.as"))
 
 
 class TestFindPrim:
@@ -78,8 +78,9 @@ class TestFindPrim:
         primitive_natoms = len(primitive)
 
         # Primitive cell should have fewer or equal atoms
-        assert primitive_natoms <= original_natoms, \
+        assert primitive_natoms <= original_natoms, (
             f"Primitive cell has more atoms ({primitive_natoms}) than original ({original_natoms})"
+        )
 
     def test_find_prim_different_symprec(self, structures_dir, temp_output_dir):
         """Test find_prim with different symmetry precision values."""
@@ -128,8 +129,9 @@ class TestFindPrim:
         # Chemical composition should be preserved (same elements, possibly different ratios)
         orig_elements = set(original.get_chemical_symbols())
         prim_elements = set(primitive.get_chemical_symbols())
-        assert prim_elements.issubset(orig_elements), \
+        assert prim_elements.issubset(orig_elements), (
             f"Primitive cell has different elements: {prim_elements} vs {orig_elements}"
+        )
 
 
 class TestScaleAtomPos:
@@ -199,7 +201,7 @@ class TestScaleAtomPos:
         scale_atom_pos(input_file, output_file)
 
         # Read the output file as text to check format
-        with open(output_file, 'r') as f:
+        with open(output_file, "r") as f:
             lines = f.readlines()
 
         # Basic VASP format checks
@@ -209,7 +211,7 @@ class TestScaleAtomPos:
         # Check that we have lattice vectors (lines 2-4)
         for i in range(2, 5):
             parts = lines[i].strip().split()
-            assert len(parts) == 3, f"Line {i+1} should have 3 lattice vector components"
+            assert len(parts) == 3, f"Line {i + 1} should have 3 lattice vector components"
             # Should be able to convert to float
             for part in parts:
                 float(part)  # This will raise ValueError if not a number
@@ -275,12 +277,14 @@ class TestFindOrth:
         new_orthogonality = max(orth_cos_ab, orth_cos_ac, orth_cos_bc)
 
         # The new cell should be more orthogonal (smaller cosine values)
-        assert new_orthogonality <= orig_orthogonality + 1e-6, \
+        assert new_orthogonality <= orig_orthogonality + 1e-6, (
             f"New cell not more orthogonal: orig={orig_orthogonality:.6f}, new={new_orthogonality:.6f}"
+        )
 
         # Verify the structure has more atoms (it's a supercell)
-        assert len(orth_atoms) >= len(original), \
+        assert len(orth_atoms) >= len(original), (
             f"Orthogonal cell has fewer atoms ({len(orth_atoms)}) than original ({len(original)})"
+        )
 
     def test_find_orth_different_max_lengths(self, structures_dir, temp_output_dir):
         """Test find_orth with different maximum length constraints."""
@@ -328,8 +332,9 @@ class TestFindOrth:
             orth_atoms = orth_atoms[0]
 
         # Should be a supercell (more atoms)
-        assert len(orth_atoms) >= len(original), \
+        assert len(orth_atoms) >= len(original), (
             f"Orthogonal cell should be supercell: {len(orth_atoms)} >= {len(original)}"
+        )
 
         # Should preserve chemical composition ratios
         orig_symbols = original.get_chemical_symbols()
@@ -342,5 +347,4 @@ class TestFindOrth:
         for element in orig_counts:
             assert element in orth_counts, f"Element {element} missing in orthogonal cell"
             ratio = orth_counts[element] / orig_counts[element]
-            assert abs(ratio - round(ratio)) < 1e-10, \
-                f"Non-integer ratio for {element}: {ratio}"
+            assert abs(ratio - round(ratio)) < 1e-10, f"Non-integer ratio for {element}: {ratio}"

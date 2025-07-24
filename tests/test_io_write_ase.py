@@ -41,7 +41,7 @@ all_formats = [
 
 def test_write(snapshot):
     """Tests reading various as files."""
-    for s in Path(f"{__file__}/../structures").resolve().iterdir():
+    for s in sorted(Path(f"{__file__}/../structures").resolve().iterdir()):
         if s.name.endswith(".as"):
             atoms = rda.read(s)
             for fmt in all_formats:

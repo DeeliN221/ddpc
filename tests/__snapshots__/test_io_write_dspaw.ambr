@@ -1,20 +1,20 @@
 # serializer version: 1
 # name: test_write
   '''
-  mag.as
-  Atoms(symbols='Ni2O2', pbc=True, cell=[[4.1684, 2.0842, 2.0842], [2.0842, 4.1684, 2.0842], [2.0842, 2.0842, 4.1684]], initial_magmoms=...)
+  all.as
+  Atoms(symbols='S4Mo2', pbc=True, cell=[[3.19031572, 0.0, 0.0], [-1.59515786, 2.76289446, 0.0], [0.0, 0.0, 14.87900448]], initial_magmoms=...)
   '''
 # ---
 # name: test_write.1
   '''
-  magxyz.as
-  Atoms(symbols='Ni2O2', pbc=True, cell=[[4.1684, 2.0842, 2.0842], [2.0842, 4.1684, 2.0842], [2.0842, 2.0842, 4.1684]], initial_magmoms=...)
+  fixxyz.as
+  Atoms(symbols='S4Mo2', pbc=True, cell=[[3.19031572, 0.0, 0.0], [-1.59515786, 2.76289446, 0.0], [0.0, 0.0, 14.87900448]])
   '''
 # ---
 # name: test_write.2
   '''
-  fixxyz.as
-  Atoms(symbols='S4Mo2', pbc=True, cell=[[3.19031572, 0.0, 0.0], [-1.59515786, 2.76289446, 0.0], [0.0, 0.0, 14.87900448]])
+  fixxyzmagxyz.as
+  Atoms(symbols='S4Mo2', pbc=True, cell=[[3.19031572, 0.0, 0.0], [-1.59515786, 2.76289446, 0.0], [0.0, 0.0, 14.87900448]], initial_magmoms=...)
   '''
 # ---
 # name: test_write.3
@@ -25,13 +25,13 @@
 # ---
 # name: test_write.4
   '''
-  all.as
-  Atoms(symbols='S4Mo2', pbc=True, cell=[[3.19031572, 0.0, 0.0], [-1.59515786, 2.76289446, 0.0], [0.0, 0.0, 14.87900448]], initial_magmoms=...)
+  mag.as
+  Atoms(symbols='Ni2O2', pbc=True, cell=[[4.1684, 2.0842, 2.0842], [2.0842, 4.1684, 2.0842], [2.0842, 2.0842, 4.1684]], initial_magmoms=...)
   '''
 # ---
 # name: test_write.5
   '''
-  fixxyzmagxyz.as
-  Atoms(symbols='S4Mo2', pbc=True, cell=[[3.19031572, 0.0, 0.0], [-1.59515786, 2.76289446, 0.0], [0.0, 0.0, 14.87900448]], initial_magmoms=...)
+  magxyz.as
+  Atoms(symbols='Ni2O2', pbc=True, cell=[[4.1684, 2.0842, 2.0842], [2.0842, 4.1684, 2.0842], [2.0842, 2.0842, 4.1684]], initial_magmoms=...)
   '''
 # ---
